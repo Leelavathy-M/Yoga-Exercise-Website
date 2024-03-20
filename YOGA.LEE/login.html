@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            justify-content: center;
+            background-image: url(./assets/bgyoga.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .login_container{
+            border: 2px solid rgba(225, 225, 225, .5);
+            backdrop-filter: blur(20px);
+            position: relative;
+            height: 500px;
+            display: flex;
+            border-radius: 15px;
+            margin-top: 70px;
+            width:450px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+       
+        label{
+            display: block;
+            color: #121b29;
+            margin-bottom: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        #login{
+            padding: 20px 40px;
+        }
+        #login input{
+            height: 40px;
+            width: 350px;
+            padding: 0px 15px;
+            font-size: 16px;
+            border: 1px solid #1e293b;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        img{
+            position: relative;
+            width: 100px;
+            left:38%;
+        }
+        button{
+            background-color:rgb(220, 139, 181);
+            color: #1e293b;
+            margin-top: 50px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 350px;
+            height: 50px;
+            font-size: 20px;
+        }
+        a{
+            color:#1e293b;
+            padding: 20px;
+        }
+        button:hover{
+            background-color:rgb(190, 95, 176);
+        }
+
+</style>
+</head>
+<body>
+    <div class="login_container">
+        <form id="login">
+            <header><img src="assets/logo2.png"> </header>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your Name" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+            <a href="">forget password?</a>
+
+            <button type="button" onclick="login()">Login</button>
+    
+        </form>
+    </div>
+
+    <script>
+        function login() {
+    
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    if (username === "Lee" && password === "123456") {
+        window.location.href = "index.html";
+    } else {
+        alert("Invalid username or password. Please try again.");
+    }
+}
+    </script>
+
+</body>
+</html>
